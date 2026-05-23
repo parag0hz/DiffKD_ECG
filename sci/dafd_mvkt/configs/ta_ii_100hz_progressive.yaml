@@ -1,0 +1,36 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: progressive
+  sampling_hz: 100     # low-Hz TA output rate
+  lead: II
+  normalize: zscore
+  eval_input_key: student_x   # prevents evaluate.py from using 500Hz ta_x
+
+training:
+  epochs: 50
+  batch_size: 64
+  lr: 3.0e-4
+  weight_decay: 1.0e-5
+  high_ta_hz: 500        # source TA sampling rate (for run_name auto-naming)
+  alpha_high_ta: 1.0     # MKD weight (TA_high → TA_low)
+  beta_high_ta_crf: 0.1  # CRF weight (TA_high ↔ TA_low)
+  gamma_high_ta_feat: 0.2 # FeatureKD weight
+  temperature: 2.0
+  contrastive_temperature: 0.07
+  feature_pool_size: 128
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 42
+  amp: false
+  scheduler: cosine
+
+output:
+  dir: outputs
+  name: ta_ii_100hz_progressive

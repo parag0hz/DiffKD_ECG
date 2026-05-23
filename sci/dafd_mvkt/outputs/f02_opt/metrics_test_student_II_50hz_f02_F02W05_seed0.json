@@ -1,0 +1,37 @@
+{
+  "output_name": "student_II_50hz_f02_F02W05_seed0",
+  "variant_id": "F02W05",
+  "w500": 0.7,
+  "w100": 0.3,
+  "temperature": 2.0,
+  "use_crf": false,
+  "beta_crf": 0.05,
+  "use_feature_kd": false,
+  "gamma_feature": 0.1,
+  "tw_mode": "fixed",
+  "macro_auc": 0.84328,
+  "macro_f1_0_5": 0.5925,
+  "macro_f1_tuned": 0.62881,
+  "val_auc_best": 0.85047,
+  "per_class_thresholds": {
+    "NORM": 0.2,
+    "MI": 0.41,
+    "STTC": 0.23,
+    "CD": 0.44,
+    "HYP": 0.24
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0
+  },
+  "auc_NORM": 0.89973,
+  "f1_tuned_NORM": 0.81464,
+  "auc_MI": 0.82225,
+  "f1_tuned_MI": 0.59847,
+  "auc_STTC": 0.87233,
+  "f1_tuned_STTC": 0.6594,
+  "auc_CD": 0.86284,
+  "f1_tuned_CD": 0.69444,
+  "auc_HYP": 0.75925,
+  "f1_tuned_HYP": 0.3771
+}

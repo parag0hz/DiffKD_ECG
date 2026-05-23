@@ -1,0 +1,6 @@
+{
+  "output_name": "F02_branch3_1L100_from_12L100_seed0",
+  "macro_auc": 0.84101,
+  "macro_f1_0_5": 0.57083,
+  "macro_f1_tuned": 0.62641
+}

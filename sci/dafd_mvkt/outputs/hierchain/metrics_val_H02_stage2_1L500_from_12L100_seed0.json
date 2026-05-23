@@ -1,0 +1,6 @@
+{
+  "output_name": "H02_stage2_1L500_from_12L100_seed0",
+  "macro_auc": 0.85335,
+  "macro_f1_0_5": 0.60426,
+  "macro_f1_tuned": 0.64126
+}

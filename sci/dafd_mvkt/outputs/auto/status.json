@@ -1,0 +1,21 @@
+{
+  "target_auc": 0.843,
+  "target_f1": 0.626,
+  "mvkt_beaten": true,
+  "status": "mvkt_beaten",
+  "next_stage": "50hz_tradeoff",
+  "best_method_100hz": "II_100hz_bce,ta_mkd,ta_crf,feature_clecgta_clecg",
+  "best_auc_100hz": 0.846,
+  "best_f1_100hz": 0.6303,
+  "best_lead_100hz": "II",
+  "gap_auc": -0.0030000000000000027,
+  "gap_f1": -0.0042999999999999705,
+  "leadI_beaten": false,
+  "leadII_beaten": true,
+  "leadI_best_auc": 0.83489,
+  "leadII_best_auc": 0.846,
+  "tradeoff_status": "no_clecg_gain",
+  "best_50hz_auc": 0.83203,
+  "best_50hz_f1": 0.61062,
+  "bce_50hz_auc": 0.80612
+}

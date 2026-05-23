@@ -1,0 +1,33 @@
+# All 20 combinations of 3 teachers from 6 candidates.
+#
+# Teacher IDs:
+#   T1: 12-lead 500Hz (12L500)
+#   T2: 12-lead 100Hz (12L100)
+#   T3: 12-lead  50Hz (12L50)
+#   T4:  1-lead  500Hz (1L500)
+#   T5:  1-lead  100Hz (1L100)
+#   T6:  1-lead   50Hz (1L50)  — same input domain as student
+#
+# Equal weights for initial screening: [0.333333, 0.333333, 0.333333]
+
+combos:
+  C01: {teachers: [T1, T2, T3], weights: [0.333333, 0.333333, 0.333333], category: "12L-only"}
+  C02: {teachers: [T1, T2, T4], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C03: {teachers: [T1, T2, T5], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C04: {teachers: [T1, T2, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C05: {teachers: [T1, T3, T4], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C06: {teachers: [T1, T3, T5], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C07: {teachers: [T1, T3, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C08: {teachers: [T1, T4, T5], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C09: {teachers: [T1, T4, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C10: {teachers: [T1, T5, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C11: {teachers: [T2, T3, T4], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C12: {teachers: [T2, T3, T5], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C13: {teachers: [T2, T3, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C14: {teachers: [T2, T4, T5], weights: [0.333333, 0.333333, 0.333333], category: "mixed"}
+  C15: {teachers: [T2, T4, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C16: {teachers: [T2, T5, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C17: {teachers: [T3, T4, T5], weights: [0.333333, 0.333333, 0.333333], category: "1L+12L50"}
+  C18: {teachers: [T3, T4, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C19: {teachers: [T3, T5, T6], weights: [0.333333, 0.333333, 0.333333], category: "mixed-T6"}
+  C20: {teachers: [T4, T5, T6], weights: [0.333333, 0.333333, 0.333333], category: "1L-only"}

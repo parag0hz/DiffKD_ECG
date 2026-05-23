@@ -1,0 +1,112 @@
+views:
+  12L500:
+    lead_type: 12
+    hz: 500
+    input_key: teacher_12l_500
+    in_channels: 12
+    length: 5000
+  12L100:
+    lead_type: 12
+    hz: 100
+    input_key: teacher_12l_100
+    in_channels: 12
+    length: 1000
+  12L50:
+    lead_type: 12
+    hz: 50
+    input_key: teacher_12l_50
+    in_channels: 12
+    length: 500
+  1L500:
+    lead_type: 1
+    hz: 500
+    input_key: teacher_1l_500
+    in_channels: 1
+    length: 5000
+  1L100:
+    lead_type: 1
+    hz: 100
+    input_key: teacher_1l_100
+    in_channels: 1
+    length: 1000
+  1L50:
+    lead_type: 1
+    hz: 50
+    input_key: teacher_1l_50
+    in_channels: 1
+    length: 500
+
+student:
+  view: 1L50
+  input_key: student_x
+  in_channels: 1
+  hz: 50
+  length: 500
+
+skip_fork_join:
+  SF01:
+    t1: 12L100
+    t2: 12L50
+    t3: 1L100
+    weights: [0.20, 0.40, 0.40]
+  SF02:
+    t1: 12L100
+    t2: 1L500
+    t3: 1L100
+    weights: [0.20, 0.40, 0.40]
+  SF03:
+    t1: 12L500
+    t2: 12L50
+    t3: 1L100
+    weights: [0.10, 0.45, 0.45]
+  SF04:
+    t1: 12L500
+    t2: 1L500
+    t3: 1L100
+    weights: [0.10, 0.45, 0.45]
+  SF05:
+    t1: 12L100
+    t2: 12L50
+    t3: 1L50
+    weights: [0.20, 0.40, 0.40]
+  SF06:
+    t1: 1L500
+    t2: 1L100
+    t3: 1L50
+    weights: [0.20, 0.40, 0.40]
+
+# global teacher checkpoints (used as t1)
+t1_checkpoints:
+  12L500: dafd_mvkt/outputs/teacher_best.pt
+  12L100: dafd_mvkt/outputs/teacher_12lead_100hz_resnet34_best.pt
+  12L50:  dafd_mvkt/outputs/teacher_12lead_50hz_resnet34_best.pt
+  1L500:  dafd_mvkt/outputs/ta_II_500hz_simclr_seed0_best.pt
+  1L100:  dafd_mvkt/outputs/ta_II_100hz_from_ta500_seed0_best.pt
+  1L50:   dafd_mvkt/outputs/student_II_50hz_bce_ta_mkd_ta_crf_feature_prog_simclr_seed0_best.pt
+
+simclr_checkpoints:
+  1L50:  dafd_mvkt/outputs/simclr/simclr_II_50hz_seed{seed}_encoder.pt
+  1L100: dafd_mvkt/outputs/simclr/simclr_II_100hz_seed{seed}_encoder.pt
+  1L500: dafd_mvkt/outputs/simclr/simclr_II_500hz_seed{seed}_encoder.pt
+
+training:
+  epochs: 100
+  batch_size: 512
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine
+  grad_clip: 1.0
+  num_workers: 4
+  persistent_workers: true
+  lambda_kd: 1.0
+  temperature: 2.0
+
+references:
+  bce_50hz_auc: 0.8061
+  bce_50hz_f1:  0.5740
+  progressive_simclr_auc: 0.8396
+  progressive_simclr_f1:  0.6176
+  parallel_c14_auc: 0.8425
+  parallel_c14_f1:  0.6243
+  mvkt_auc: 0.843
+  mvkt_f1:  0.626

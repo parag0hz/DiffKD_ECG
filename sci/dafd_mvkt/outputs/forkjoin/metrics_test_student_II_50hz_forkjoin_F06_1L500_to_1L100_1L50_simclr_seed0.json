@@ -1,0 +1,32 @@
+{
+  "output_name": "student_II_50hz_forkjoin_F06_1L500_to_1L100_1L50_simclr_seed0",
+  "teacher2_view": "1L100",
+  "teacher3_view": "1L50",
+  "teacher_weights": "0.5,0.5",
+  "macro_auc": 0.84135,
+  "macro_f1_0_5": 0.57272,
+  "macro_f1_tuned": 0.61754,
+  "val_auc_best": 0.84801,
+  "per_class_thresholds": {
+    "NORM": 0.38,
+    "MI": 0.38,
+    "STTC": 0.18,
+    "CD": 0.51,
+    "HYP": 0.19
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0
+  },
+  "auc_NORM": 0.89788,
+  "f1_tuned_NORM": 0.81568,
+  "auc_MI": 0.81351,
+  "f1_tuned_MI": 0.56762,
+  "auc_STTC": 0.87303,
+  "f1_tuned_STTC": 0.66439,
+  "auc_CD": 0.86022,
+  "f1_tuned_CD": 0.67497,
+  "auc_HYP": 0.76214,
+  "f1_tuned_HYP": 0.36502
+}

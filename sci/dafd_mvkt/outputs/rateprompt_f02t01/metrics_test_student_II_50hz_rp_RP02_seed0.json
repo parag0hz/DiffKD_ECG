@@ -1,0 +1,51 @@
+{
+  "output_name": "student_II_50hz_rp_RP02_seed0",
+  "variant_id": "RP02",
+  "rate_conditioning": "fs_film",
+  "multi_rate_train": true,
+  "rate_set": [
+    50,
+    100,
+    250,
+    500
+  ],
+  "film_layers": [
+    "layer1",
+    "layer2",
+    "layer3",
+    "layer4"
+  ],
+  "time_pe_dim": 15,
+  "fs_embed_dim": 64,
+  "w500": 0.6,
+  "w100": 0.4,
+  "temperature": 1.5,
+  "macro_auc": 0.82836,
+  "macro_f1_0_5": 0.49135,
+  "macro_f1_tuned": 0.60398,
+  "val_auc_best": 0.83454,
+  "delta_auc_vs_f02t01": -0.01808,
+  "per_class_thresholds": {
+    "NORM": 0.33,
+    "MI": 0.4,
+    "STTC": 0.23,
+    "CD": 0.22,
+    "HYP": 0.08
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "n_params": 7676613,
+    "local_f02t01_baseline": 0.84644
+  },
+  "auc_NORM": 0.88836,
+  "f1_tuned_NORM": 0.80268,
+  "auc_MI": 0.79576,
+  "f1_tuned_MI": 0.57574,
+  "auc_STTC": 0.863,
+  "f1_tuned_STTC": 0.64286,
+  "auc_CD": 0.84702,
+  "f1_tuned_CD": 0.65686,
+  "auc_HYP": 0.74768,
+  "f1_tuned_HYP": 0.34179
+}

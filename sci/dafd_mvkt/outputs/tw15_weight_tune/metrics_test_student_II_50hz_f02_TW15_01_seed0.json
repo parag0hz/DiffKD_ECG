@@ -1,0 +1,42 @@
+{
+  "output_name": "student_II_50hz_f02_TW15_01_seed0",
+  "variant_id": "TW15_01",
+  "w500": 0.5,
+  "w100": 0.5,
+  "temperature": 1.5,
+  "use_crf": false,
+  "beta_crf": 0.05,
+  "use_feature_kd": false,
+  "gamma_feature": 0.1,
+  "tw_mode": "fixed",
+  "attention_type": "none",
+  "attention_layers": "layer3,layer4",
+  "lambda_att": 0.0,
+  "attn_loss_mode": "mse_prob",
+  "macro_auc": 0.84456,
+  "macro_f1_0_5": 0.58262,
+  "macro_f1_tuned": 0.62882,
+  "val_auc_best": 0.84979,
+  "per_class_thresholds": {
+    "NORM": 0.17,
+    "MI": 0.41,
+    "STTC": 0.25,
+    "CD": 0.41,
+    "HYP": 0.21
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "n_params": 7549637
+  },
+  "auc_NORM": 0.90052,
+  "f1_tuned_NORM": 0.81597,
+  "auc_MI": 0.82675,
+  "f1_tuned_MI": 0.60491,
+  "auc_STTC": 0.87454,
+  "f1_tuned_STTC": 0.65654,
+  "auc_CD": 0.86009,
+  "f1_tuned_CD": 0.67421,
+  "auc_HYP": 0.76092,
+  "f1_tuned_HYP": 0.39249
+}

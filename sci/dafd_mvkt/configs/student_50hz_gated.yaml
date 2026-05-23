@@ -1,0 +1,44 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: hier
+  sampling_hz: 50
+  lead: II
+  normalize: zscore
+
+training:
+  epochs: 60
+  batch_size: 64
+  lr: 3.0e-4
+  weight_decay: 1.0e-5
+  alpha_teacher: 0.3
+  alpha_ta: 1.0
+  beta_ta_crf: 0.1
+  gamma_feature: 0.2
+  gated_kd_weight: 1.0
+  gate_mode: confidence_agreement
+  lambda_teacher: 0.3
+  lambda_ta: 1.0
+  segment_feature_weight: 0.2
+  num_segments: 8
+  pool_per_segment: 16
+  attention_weighted_segment: false
+  class_adaptive: false
+  temperature: 2.0
+  contrastive_temperature: 0.07
+  feature_pool_size: 128
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 42
+  amp: false
+  scheduler: cosine
+
+output:
+  dir: outputs
+  name: student_ii_50hz_gated

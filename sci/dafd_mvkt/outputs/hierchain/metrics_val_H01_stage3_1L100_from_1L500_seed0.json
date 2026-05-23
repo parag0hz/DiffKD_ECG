@@ -1,0 +1,6 @@
+{
+  "output_name": "H01_stage3_1L100_from_1L500_seed0",
+  "macro_auc": 0.85807,
+  "macro_f1_0_5": 0.58176,
+  "macro_f1_tuned": 0.6448
+}

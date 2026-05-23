@@ -1,0 +1,141 @@
+{
+  "hostname": "kwy00-System-Product-Name",
+  "git_commit": "no-commits-yet",
+  "git_branch": "master",
+  "python_version": "3.10.20",
+  "torch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "data_dir": "/home/kwy00/sci/comper_repo/ptb_xl",
+  "ptbxl_database_rows": 21799,
+  "ptbxl_database_sha256": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+  "scp_statements_sha256": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+  "splits": {
+    "train": {
+      "n_samples": 17084,
+      "ecg_id_hash": "4c1ac63c61d0894d18d2bc339fb7e73f7d055967f007e16f32aa71e6dbd50a9c",
+      "label_hash": "173fab9817e53d43328855276baf926a04a78d6274fb842bfb2bcd85d61145d2",
+      "ecg_id_first5": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ecg_id_last5": [
+        21832,
+        21833,
+        21834,
+        21835,
+        21836
+      ],
+      "label_sum_per_class": [
+        7596,
+        4379,
+        4186,
+        3907,
+        2119
+      ]
+    },
+    "val": {
+      "n_samples": 2146,
+      "ecg_id_hash": "ccb4c748ca8435aa39f8c575235c22d7684b6dbab1122b194c38f7c3b99e31db",
+      "label_hash": "99b1c0dc174ff32a3f89324504f82adbc3580cdfee8dd124f92057210322e862",
+      "ecg_id_first5": [
+        8,
+        10,
+        26,
+        28,
+        30
+      ],
+      "ecg_id_last5": [
+        21765,
+        21777,
+        21788,
+        21831,
+        21837
+      ],
+      "label_sum_per_class": [
+        955,
+        540,
+        528,
+        495,
+        268
+      ]
+    },
+    "test": {
+      "n_samples": 2158,
+      "ecg_id_hash": "6d301c8a20ab02ba26f46bc23b36845c9fddb0bdd36eeffac2682590af3d0ccb",
+      "label_hash": "b0545de7eab0013e91ce0e020fa47f653ed7e5485a73285ff464236de495755d",
+      "ecg_id_first5": [
+        9,
+        38,
+        40,
+        57,
+        59
+      ],
+      "ecg_id_last5": [
+        21809,
+        21812,
+        21818,
+        21819,
+        21826
+      ],
+      "label_sum_per_class": [
+        963,
+        550,
+        521,
+        496,
+        262
+      ]
+    }
+  },
+  "checkpoint_path": "/home/kwy00/sci/dafd_mvkt/outputs/f02_opt/student_II_50hz_f02_F02T01_seed0_best.pt",
+  "checkpoint_size_bytes": 30349371,
+  "checkpoint_sha256": "0f08f1da32fc951d020dd7ef76ae8eaf9501f233ced1fba469e2213bd537694f",
+  "metrics_test_path": "/home/kwy00/sci/dafd_mvkt/outputs/f02_opt/metrics_test_student_II_50hz_f02_F02T01_seed0.json",
+  "metrics_val_path": "/home/kwy00/sci/dafd_mvkt/outputs/f02_opt/metrics_val_student_II_50hz_f02_F02T01_seed0.json",
+  "test_macro_auc": 0.84644,
+  "val_macro_auc": 0.85037,
+  "test_macro_f1_tuned": 0.62544,
+  "val_auc_best": 0.85037,
+  "thresholds": {
+    "NORM": 0.37,
+    "MI": 0.36,
+    "STTC": 0.23,
+    "CD": 0.35,
+    "HYP": 0.21
+  },
+  "prob_array_sha256": "745e8796b0d683a61fcee8f1c0029c88babd50f86a2cd041e4796d613ef54a54",
+  "label_array_sha256": "1484cf078abf00f374bc10230b058eb6f8795d58a3d8af80fe73442f08d6631c",
+  "pred_array_sha256": "17cdf63dc19521f0a1a94667103f881105b8df5cb35b86939fb0b607b9554697",
+  "record_id_array_sha256": "f506b93ef6a644364f06bfbcc72d23c37221ffa8eb5cfca2a464d6d45aebc2f0",
+  "test_n_samples": 2158,
+  "test_positive_counts": {
+    "NORM": 963,
+    "MI": 550,
+    "STTC": 521,
+    "CD": 496,
+    "HYP": 262
+  },
+  "per_class_auc": {
+    "NORM": 0.90049,
+    "MI": 0.82173,
+    "STTC": 0.87417,
+    "CD": 0.86444,
+    "HYP": 0.77135
+  },
+  "per_class_f1_tuned": {
+    "NORM": 0.81134,
+    "MI": 0.59179,
+    "STTC": 0.66369,
+    "CD": 0.67767,
+    "HYP": 0.38274
+  },
+  "eval_script_path": "/home/kwy00/sci/dafd_mvkt/train_f02_student_tune.py",
+  "eval_script_sha256": "e9ca3ada65fb96e1df2dbe298fe2eea2f9a87dead5795e297a96806bbe08aef9",
+  "dataset_script_sha256": "e32c1d5fe5fe3e08fdab45d6b3e9e34e7078633c393caceddd4bd254f6b90264",
+  "metrics_script_sha256": "3a75e4f2014bbc4ee5528617fd516bf525153db6d829ae077226477253a9436e",
+  "note": "Cross-machine verification: if checkpoint_sha256, record_id_array_sha256, label_array_sha256, eval_script_sha256, and metrics_script_sha256 all match, test AUC must agree. Any mismatch means the experiments differ."
+}

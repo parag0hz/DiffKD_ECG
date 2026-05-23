@@ -1,0 +1,39 @@
+{
+  "config": "dafd_mvkt/configs/adaptive_50hz.yaml",
+  "data_dir": "comper_repo/ptb_xl",
+  "lead": "II",
+  "teacher_1l500_ckpt": "dafd_mvkt/outputs/forkjoin/F02_branch2_1L500_from_12L100_seed0_best.pt",
+  "teacher_1l100_ckpt": "dafd_mvkt/outputs/forkjoin/F02_branch3_1L100_from_12L100_seed0_best.pt",
+  "student_init_ckpt": "dafd_mvkt/outputs/simclr/simclr_II_50hz_seed0_encoder.pt",
+  "weights": "0.60,0.40",
+  "lambda_kd": 1.0,
+  "temperature": 1.5,
+  "rate_conditioning": "time_pe",
+  "time_pe_dim": 15,
+  "fs_embed_dim": 64,
+  "film_layers": "layer1,layer2,layer3,layer4",
+  "multi_rate_train": false,
+  "rate_set": "50",
+  "seed": 0,
+  "epochs": null,
+  "batch_size": null,
+  "variant_id": "RP01",
+  "output_dir": "dafd_mvkt/outputs/rateprompt_f02t01",
+  "debug": false,
+  "__resolved": {
+    "w500": 0.6,
+    "w100": 0.4,
+    "ep": 100,
+    "bs": 512,
+    "lr": 0.001,
+    "rate_set": [
+      50
+    ],
+    "film_layers": [
+      "layer1",
+      "layer2",
+      "layer3",
+      "layer4"
+    ]
+  }
+}

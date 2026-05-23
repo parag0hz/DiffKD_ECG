@@ -1,0 +1,31 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: ta
+  lead: II
+  normalize: zscore
+
+training:
+  epochs: 50
+  batch_size: 64
+  lr: 3.0e-4
+  weight_decay: 1.0e-5
+  alpha_ta: 1.0          # MKD weight (teacher → TA)
+  beta_ta: 0.1           # CRF weight (teacher ↔ TA)
+  temperature: 2.0       # MKD soft-target temperature
+  contrastive_temperature: 0.07
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 42
+  amp: false
+  scheduler: cosine
+
+output:
+  dir: outputs
+  name: ta_ii_500hz

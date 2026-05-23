@@ -1,0 +1,52 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  sampling_rate: 50
+  lead: II
+  normalize: zscore
+
+training:
+  epochs: 100
+  batch_size: 512
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine
+  grad_clip: 1.0
+  num_workers: 4
+  persistent_workers: true
+  seed: 0
+  amp: false
+
+  lambda_kd: 1.0
+  temperature: 2.0
+
+  # EMA settings (used by EMA trainers)
+  lambda_ema: 0.1
+  ema_decay: 0.999
+
+  # Mutual learning settings
+  lambda_up: 1.0
+  lambda_ts: 1.0
+  lambda_mutual: 0.05
+
+  # Student-aware branch settings
+  lambda_sa: 0.05
+
+outputs:
+  dir: dafd_mvkt/outputs/adaptive
+
+references:
+  bce_50hz_auc: 0.8061
+  bce_50hz_f1:  0.5740
+  progressive_simclr_auc: 0.8396
+  progressive_simclr_f1:  0.6176
+  parallel_c14_auc: 0.8425
+  parallel_c14_f1:  0.6243
+  mvkt_auc: 0.843
+  mvkt_f1:  0.626

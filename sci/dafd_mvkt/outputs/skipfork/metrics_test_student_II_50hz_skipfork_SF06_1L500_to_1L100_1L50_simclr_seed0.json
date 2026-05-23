@@ -1,0 +1,36 @@
+{
+  "output_name": "student_II_50hz_skipfork_SF06_1L500_to_1L100_1L50_simclr_seed0",
+  "skip_view": "1L500",
+  "branch2_view": "1L100",
+  "branch3_view": "1L50",
+  "teacher_weights": "0.2,0.4,0.4",
+  "macro_auc": 0.84478,
+  "macro_f1_0_5": 0.56815,
+  "macro_f1_tuned": 0.62415,
+  "val_auc_best": 0.85008,
+  "per_class_thresholds": {
+    "NORM": 0.42,
+    "MI": 0.28,
+    "STTC": 0.13,
+    "CD": 0.49,
+    "HYP": 0.27
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "skip_ckpt": "dafd_mvkt/outputs/ta_II_500hz_simclr_seed0_best.pt",
+    "branch2_ckpt": "dafd_mvkt/outputs/skipfork/SF06_branch2_1L100_from_1L500_seed0_best.pt",
+    "branch3_ckpt": "dafd_mvkt/outputs/skipfork/SF06_branch3_1L50_from_1L500_seed0_best.pt"
+  },
+  "auc_NORM": 0.90021,
+  "f1_tuned_NORM": 0.81372,
+  "auc_MI": 0.81858,
+  "f1_tuned_MI": 0.58681,
+  "auc_STTC": 0.8746,
+  "f1_tuned_STTC": 0.64921,
+  "auc_CD": 0.86463,
+  "f1_tuned_CD": 0.68819,
+  "auc_HYP": 0.76587,
+  "f1_tuned_HYP": 0.38283
+}

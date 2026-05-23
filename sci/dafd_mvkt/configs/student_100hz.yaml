@@ -1,0 +1,37 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  sampling_rate: 100         # Hz — downsample from 500Hz with anti-aliasing
+  mode: student
+  student_lead: II           # I | II | III | aVR | aVL | aVF | V1-V6
+  normalize: zscore
+
+distillation:
+  alpha: 1.0                 # MKD weight
+  beta: 0.1                  # CRF weight
+  gamma: 0.1                 # DAF weight
+  mkd_temperature: 2.0
+  crf_temperature: 0.07
+  daf_pool_size: 128
+  daf_common_dim: 256
+
+training:
+  epochs: 100
+  batch_size: 32
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 42
+  amp: false
+
+outputs:
+  dir: outputs/student_100hz
+  checkpoint: outputs/student_100hz_best.pt

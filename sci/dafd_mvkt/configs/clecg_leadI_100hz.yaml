@@ -1,0 +1,41 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: clecg
+  sampling_hz: 100
+  lead: I
+  normalize: zscore
+
+augment:
+  num_segments: 4
+  mask_ratio: 0.2
+  use_wavelet: true
+  wavelet_prob: 0.5
+  wavelet_level: 4
+  threshold_ratio: 0.05
+  use_noise: false
+
+training:
+  epochs: 100
+  batch_size: 256
+  lr: 3.0e-4
+  lr_min: 1.0e-6
+  weight_decay: 1.0e-4
+  queue_size: 2048
+  temperature: 0.07
+  momentum: 0.999
+  cosine_lr: true
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 0
+  amp: false
+
+output:
+  dir: dafd_mvkt/outputs
+  name: clecg_I_100hz

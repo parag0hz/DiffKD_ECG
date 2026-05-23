@@ -1,0 +1,7 @@
+teacher_id,lead_type,hz,checkpoint,ckpt_exists,auc,f1_tuned,status
+T1,12-lead,500,dafd_mvkt/outputs/teacher_best.pt,True,0.9121,0.719,ready
+T2,12-lead,100,dafd_mvkt/outputs/teacher_12lead_100hz_resnet34_best.pt,True,0.9028,0.708,ready
+T3,12-lead,50,dafd_mvkt/outputs/teacher_12lead_50hz_resnet34_best.pt,True,0.8891,0.6687,ready
+T4,1-lead,500,dafd_mvkt/outputs/ta_II_500hz_simclr_seed0_best.pt,True,0.8464,0.6289,ready
+T5,1-lead,100,dafd_mvkt/outputs/ta_II_100hz_from_ta500_seed0_best.pt,True,0.8413,0.6189,ready
+T6,1-lead,50,dafd_mvkt/outputs/student_II_50hz_bce_ta_mkd_ta_crf_feature_prog_simclr_seed0_best.pt,True,0.8396,0.6176,ready

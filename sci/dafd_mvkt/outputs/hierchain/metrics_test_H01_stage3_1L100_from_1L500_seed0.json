@@ -1,0 +1,33 @@
+{
+  "output_name": "H01_stage3_1L100_from_1L500_seed0",
+  "teacher_view": "1L500",
+  "target_view": "1L100",
+  "macro_auc": 0.84736,
+  "macro_f1_0_5": 0.58722,
+  "macro_f1_tuned": 0.62619,
+  "val_auc_best": 0.85807,
+  "per_class_thresholds": {
+    "NORM": 0.37,
+    "MI": 0.24,
+    "STTC": 0.24,
+    "CD": 0.42,
+    "HYP": 0.22
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "teacher_ckpt": "dafd_mvkt/outputs/hierchain/H01_stage2_1L500_from_12L500_seed0_best.pt",
+    "target_init": "dafd_mvkt/outputs/simclr/simclr_II_100hz_seed0_encoder.pt"
+  },
+  "auc_NORM": 0.90092,
+  "f1_tuned_NORM": 0.80682,
+  "auc_MI": 0.81857,
+  "f1_tuned_MI": 0.57968,
+  "auc_STTC": 0.87641,
+  "f1_tuned_STTC": 0.67176,
+  "auc_CD": 0.86904,
+  "f1_tuned_CD": 0.69197,
+  "auc_HYP": 0.77185,
+  "f1_tuned_HYP": 0.3807
+}

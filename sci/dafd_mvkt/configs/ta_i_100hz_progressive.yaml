@@ -1,0 +1,36 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: progressive
+  sampling_hz: 100
+  lead: I
+  normalize: zscore
+  eval_input_key: student_x   # prevents evaluate.py from using 500Hz ta_x
+
+training:
+  epochs: 50
+  batch_size: 256
+  lr: 3.0e-4
+  weight_decay: 1.0e-5
+  high_ta_hz: 500
+  alpha_high_ta: 1.0
+  beta_high_ta_crf: 0.1
+  gamma_high_ta_feat: 0.2
+  temperature: 2.0
+  contrastive_temperature: 0.07
+  feature_pool_size: 128
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 0
+  amp: false
+  scheduler: cosine
+
+output:
+  dir: dafd_mvkt/outputs
+  name: ta_I_100hz_progressive

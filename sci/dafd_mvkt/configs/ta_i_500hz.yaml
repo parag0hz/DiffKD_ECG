@@ -1,0 +1,31 @@
+model:
+  in_channels: 1
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  mode: ta
+  lead: I
+  normalize: zscore
+
+training:
+  epochs: 50
+  batch_size: 256
+  lr: 3.0e-4
+  weight_decay: 1.0e-5
+  alpha_ta: 1.0
+  beta_ta: 0.1
+  temperature: 2.0
+  contrastive_temperature: 0.07
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 0
+  amp: false
+  scheduler: cosine
+
+output:
+  dir: dafd_mvkt/outputs
+  name: ta_I_500hz

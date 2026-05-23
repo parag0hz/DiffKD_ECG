@@ -1,0 +1,33 @@
+{
+  "output_name": "H01_stage2_1L500_from_12L500_seed0",
+  "teacher_view": "12L500",
+  "target_view": "1L500",
+  "macro_auc": 0.84395,
+  "macro_f1_0_5": 0.5905,
+  "macro_f1_tuned": 0.62475,
+  "val_auc_best": 0.85549,
+  "per_class_thresholds": {
+    "NORM": 0.31,
+    "MI": 0.38,
+    "STTC": 0.34,
+    "CD": 0.5,
+    "HYP": 0.33
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "teacher_ckpt": "dafd_mvkt/outputs/teacher_best.pt",
+    "target_init": "dafd_mvkt/outputs/simclr/simclr_II_500hz_seed0_encoder.pt"
+  },
+  "auc_NORM": 0.90153,
+  "f1_tuned_NORM": 0.81078,
+  "auc_MI": 0.81816,
+  "f1_tuned_MI": 0.58333,
+  "auc_STTC": 0.87585,
+  "f1_tuned_STTC": 0.6691,
+  "auc_CD": 0.86594,
+  "f1_tuned_CD": 0.67544,
+  "auc_HYP": 0.75823,
+  "f1_tuned_HYP": 0.38511
+}

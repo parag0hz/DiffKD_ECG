@@ -1,0 +1,33 @@
+{
+  "output_name": "H05_stage2_12L50_from_12L100_seed0",
+  "teacher_view": "12L100",
+  "target_view": "12L50",
+  "macro_auc": 0.89489,
+  "macro_f1_0_5": 0.67948,
+  "macro_f1_tuned": 0.70281,
+  "val_auc_best": 0.89877,
+  "per_class_thresholds": {
+    "NORM": 0.4,
+    "MI": 0.35,
+    "STTC": 0.31,
+    "CD": 0.31,
+    "HYP": 0.29
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "teacher_ckpt": "dafd_mvkt/outputs/teacher_12lead_100hz_resnet34_best.pt",
+    "target_init": "None"
+  },
+  "auc_NORM": 0.9294,
+  "f1_tuned_NORM": 0.84479,
+  "auc_MI": 0.89936,
+  "f1_tuned_MI": 0.7124,
+  "auc_STTC": 0.92674,
+  "f1_tuned_STTC": 0.75313,
+  "auc_CD": 0.90455,
+  "f1_tuned_CD": 0.74466,
+  "auc_HYP": 0.81443,
+  "f1_tuned_HYP": 0.45907
+}

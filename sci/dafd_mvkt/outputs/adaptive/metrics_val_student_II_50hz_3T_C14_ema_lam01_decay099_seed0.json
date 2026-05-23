@@ -1,0 +1,5 @@
+{
+  "output_name": "student_II_50hz_3T_C14_ema_lam01_decay099_seed0",
+  "macro_auc": 0.84801,
+  "macro_f1_tuned": 0.63566
+}

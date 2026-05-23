@@ -1,0 +1,34 @@
+{
+  "output_name": "student_II_50hz_3T_C14_ema_lam005_decay0999_seed0",
+  "combo": "C14",
+  "lambda_ema": 0.05,
+  "ema_decay": 0.999,
+  "macro_auc": 0.8394,
+  "macro_f1_0_5": 0.5592,
+  "macro_f1_tuned": 0.61702,
+  "val_auc_best": 0.84887,
+  "per_class_thresholds": {
+    "NORM": 0.5,
+    "MI": 0.31,
+    "STTC": 0.19,
+    "CD": 0.51,
+    "HYP": 0.16
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "lambda_ema": 0.05,
+    "ema_decay": 0.999,
+    "temperature": 2.0
+  },
+  "auc_NORM": 0.89397,
+  "f1_tuned_NORM": 0.80409,
+  "auc_MI": 0.80941,
+  "f1_tuned_MI": 0.58102,
+  "auc_STTC": 0.87588,
+  "f1_tuned_STTC": 0.66067,
+  "auc_CD": 0.85539,
+  "f1_tuned_CD": 0.65991,
+  "auc_HYP": 0.76233,
+  "f1_tuned_HYP": 0.3794
+}

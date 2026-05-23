@@ -1,0 +1,33 @@
+{
+  "output_name": "F05_branch3_1L50_from_12L100_seed0",
+  "teacher_view": "12L100",
+  "target_view": "1L50",
+  "macro_auc": 0.83101,
+  "macro_f1_0_5": 0.55043,
+  "macro_f1_tuned": 0.60604,
+  "val_auc_best": 0.83369,
+  "per_class_thresholds": {
+    "NORM": 0.44,
+    "MI": 0.21,
+    "STTC": 0.25,
+    "CD": 0.28,
+    "HYP": 0.21
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "teacher_ckpt": "dafd_mvkt/outputs/teacher_12lead_100hz_resnet34_best.pt",
+    "target_init": "dafd_mvkt/outputs/simclr/simclr_II_50hz_seed0_encoder.pt"
+  },
+  "auc_NORM": 0.88964,
+  "f1_tuned_NORM": 0.80746,
+  "auc_MI": 0.80841,
+  "f1_tuned_MI": 0.58462,
+  "auc_STTC": 0.8672,
+  "f1_tuned_STTC": 0.64133,
+  "auc_CD": 0.84928,
+  "f1_tuned_CD": 0.63387,
+  "auc_HYP": 0.74052,
+  "f1_tuned_HYP": 0.36295
+}

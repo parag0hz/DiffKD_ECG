@@ -1,0 +1,6 @@
+{
+  "output_name": "student_II_50hz_skipfork_SF01_12L100_to_12L50_1L100_simclr_seed0",
+  "macro_auc": 0.84238,
+  "macro_f1_0_5": 0.54079,
+  "macro_f1_tuned": 0.62438
+}

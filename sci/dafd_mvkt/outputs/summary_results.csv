@@ -1,0 +1,15 @@
+method_name,lead,hz,losses,n_seeds,mean_macro_auc,std_macro_auc,mean_macro_f1_0_5,std_macro_f1_0_5,mean_macro_f1_tuned,std_macro_f1_tuned
+teacher_12lead_500hz,12,500,bce,1,0.91209,0.0,0.71903,0.0,0.71903,0.0
+"II_100hz_bce,teacher_mkd,ta_mkd,ta_crf,feature",II,100,"bce,teacher_mkd,ta_mkd,ta_crf,feature",1,0.83893,0.0,0.55992,0.0,0.62343,0.0
+"II_50hz_bce,teacher_mkd,ta_mkd,ta_crf,feature",II,50,"bce,teacher_mkd,ta_mkd,ta_crf,feature",1,0.83002,0.0,0.53611,0.0,0.61367,0.0
+ta_ii_500hz,ii,500,"bce,mkd,crf",1,0.84569,0.0,0.62338,0.0,0.62338,0.0
+II_100hz_bce,II,100,bce,1,0.81685,0.0,0.53923,0.0,0.58646,0.0
+"II_100hz_bce,ta_mkd",II,100,"bce,ta_mkd",1,0.83795,0.0,0.55866,0.0,0.61814,0.0
+"II_100hz_bce,ta_mkd,feature",II,100,"bce,ta_mkd,feature",1,0.8374,0.0,0.55496,0.0,0.62254,0.0
+"II_100hz_bce,ta_mkd,ta_crf",II,100,"bce,ta_mkd,ta_crf",1,0.8392,0.0,0.5554,0.0,0.61538,0.0
+"II_100hz_bce,ta_mkd,ta_crf,feature",II,100,"bce,ta_mkd,ta_crf,feature",1,0.83973,0.0,0.55342,0.0,0.6195,0.0
+II_50hz_bce,II,50,bce,1,0.80612,0.0,0.50064,0.0,0.57403,0.0
+"II_50hz_bce,ta_mkd",II,50,"bce,ta_mkd",1,0.82314,0.0,0.53293,0.0,0.60564,0.0
+"II_50hz_bce,ta_mkd,feature",II,50,"bce,ta_mkd,feature",1,0.8269,0.0,0.54677,0.0,0.6067,0.0
+"II_50hz_bce,ta_mkd,ta_crf",II,50,"bce,ta_mkd,ta_crf",1,0.82827,0.0,0.54751,0.0,0.60267,0.0
+"II_50hz_bce,ta_mkd,ta_crf,feature",II,50,"bce,ta_mkd,ta_crf,feature",1,0.82998,0.0,0.54548,0.0,0.60605,0.0

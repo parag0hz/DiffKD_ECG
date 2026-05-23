@@ -1,0 +1,6 @@
+{
+  "output_name": "F04_branch2_1L500_from_12L500_seed0",
+  "macro_auc": 0.85444,
+  "macro_f1_0_5": 0.5538,
+  "macro_f1_tuned": 0.64183
+}

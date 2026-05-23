@@ -1,0 +1,42 @@
+{
+  "output_name": "student_II_50hz_f02_ATTN07_seed0",
+  "variant_id": "ATTN07",
+  "w500": 0.6,
+  "w100": 0.4,
+  "temperature": 1.5,
+  "use_crf": false,
+  "beta_crf": 0.05,
+  "use_feature_kd": false,
+  "gamma_feature": 0.1,
+  "tw_mode": "fixed",
+  "attention_type": "tgmta",
+  "attention_layers": "layer4",
+  "lambda_att": 0.1,
+  "attn_loss_mode": "mse_prob",
+  "macro_auc": 0.84405,
+  "macro_f1_0_5": 0.58191,
+  "macro_f1_tuned": 0.61974,
+  "val_auc_best": 0.85113,
+  "per_class_thresholds": {
+    "NORM": 0.27,
+    "MI": 0.37,
+    "STTC": 0.17,
+    "CD": 0.3,
+    "HYP": 0.25
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "n_params": 8646342
+  },
+  "auc_NORM": 0.89707,
+  "f1_tuned_NORM": 0.81293,
+  "auc_MI": 0.82023,
+  "f1_tuned_MI": 0.59153,
+  "auc_STTC": 0.87724,
+  "f1_tuned_STTC": 0.64911,
+  "auc_CD": 0.86381,
+  "f1_tuned_CD": 0.68566,
+  "auc_HYP": 0.76192,
+  "f1_tuned_HYP": 0.3595
+}

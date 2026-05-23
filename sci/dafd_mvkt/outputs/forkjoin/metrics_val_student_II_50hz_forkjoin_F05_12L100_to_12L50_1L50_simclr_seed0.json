@@ -1,0 +1,6 @@
+{
+  "output_name": "student_II_50hz_forkjoin_F05_12L100_to_12L50_1L50_simclr_seed0",
+  "macro_auc": 0.84142,
+  "macro_f1_0_5": 0.56659,
+  "macro_f1_tuned": 0.62743
+}

@@ -1,0 +1,37 @@
+{
+  "output_name": "student_II_50hz_prog_1l100_ema_lam01_decay099_seed0",
+  "method": "prog_ema",
+  "lambda_kd": 1.0,
+  "lambda_ema": 0.1,
+  "ema_decay": 0.99,
+  "macro_auc": 0.84151,
+  "macro_f1_0_5": 0.54788,
+  "macro_f1_tuned": 0.62371,
+  "val_auc_best": 0.85032,
+  "per_class_thresholds": {
+    "NORM": 0.41,
+    "MI": 0.32,
+    "STTC": 0.18,
+    "CD": 0.24,
+    "HYP": 0.16
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "lambda_ema": 0.1,
+    "ema_decay": 0.99,
+    "temperature": 2.0,
+    "teacher_ckpt": "dafd_mvkt/outputs/ta_II_100hz_from_ta500_seed0_best.pt",
+    "student_init": "dafd_mvkt/outputs/simclr/simclr_II_50hz_seed0_encoder.pt"
+  },
+  "auc_NORM": 0.89694,
+  "f1_tuned_NORM": 0.80937,
+  "auc_MI": 0.8141,
+  "f1_tuned_MI": 0.59058,
+  "auc_STTC": 0.8773,
+  "f1_tuned_STTC": 0.67052,
+  "auc_CD": 0.86061,
+  "f1_tuned_CD": 0.67846,
+  "auc_HYP": 0.75858,
+  "f1_tuned_HYP": 0.36963
+}

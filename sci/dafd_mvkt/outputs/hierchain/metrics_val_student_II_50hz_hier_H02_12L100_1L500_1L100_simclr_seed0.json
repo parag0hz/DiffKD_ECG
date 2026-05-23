@@ -1,0 +1,6 @@
+{
+  "output_name": "student_II_50hz_hier_H02_12L100_1L500_1L100_simclr_seed0",
+  "macro_auc": 0.84898,
+  "macro_f1_0_5": 0.59549,
+  "macro_f1_tuned": 0.63549
+}

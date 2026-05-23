@@ -1,0 +1,48 @@
+{
+  "combo": "C20",
+  "teachers": [
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "weights": [
+    0.333333,
+    0.333333,
+    0.333333
+  ],
+  "macro_auc": 0.84121,
+  "macro_f1_0_5": 0.57043,
+  "macro_f1_tuned": 0.61701,
+  "macro_precision_0_5": 0.67296,
+  "macro_recall_0_5": 0.51694,
+  "macro_specificity_0_5": 0.91056,
+  "per_class_thresholds": {
+    "NORM": 0.46,
+    "MI": 0.34,
+    "STTC": 0.16,
+    "CD": 0.55,
+    "HYP": 0.2
+  },
+  "_meta": {
+    "output_name": "student_II_50hz_3T_C20_equal_simclr_seed0",
+    "seed": 0,
+    "lambda_kd": 1.0,
+    "temperature": 2.0,
+    "student_init": "dafd_mvkt/outputs/simclr/simclr_II_50hz_seed0_encoder.pt"
+  },
+  "auc_NORM": 0.89803,
+  "f1_0_5_NORM": 0.79006,
+  "f1_tuned_NORM": 0.7966,
+  "auc_MI": 0.81545,
+  "f1_0_5_MI": 0.54673,
+  "f1_tuned_MI": 0.58292,
+  "auc_STTC": 0.87516,
+  "f1_0_5_STTC": 0.56699,
+  "f1_tuned_STTC": 0.64562,
+  "auc_CD": 0.86108,
+  "f1_0_5_CD": 0.67872,
+  "f1_tuned_CD": 0.6792,
+  "auc_HYP": 0.75633,
+  "f1_0_5_HYP": 0.26966,
+  "f1_tuned_HYP": 0.3807
+}

@@ -1,0 +1,28 @@
+model:
+  in_channels: 12
+  num_classes: 5
+  base_channels: 64
+  layers: [3, 4, 6, 3]      # ResNet-34
+  proj_dim: 128
+  dropout: 0.0
+
+data:
+  sampling_rate: 100
+  mode: teacher
+  leads: all
+  normalize: zscore
+
+training:
+  epochs: 200
+  batch_size: 32
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine
+  grad_clip: 1.0
+  num_workers: 4
+  seed: 42
+  amp: false
+
+outputs:
+  dir: dafd_mvkt/outputs
+  checkpoint: dafd_mvkt/outputs/teacher_12lead_100hz_best.pt

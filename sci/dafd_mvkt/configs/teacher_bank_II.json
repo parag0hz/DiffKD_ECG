@@ -1,0 +1,66 @@
+{
+  "lead": "II",
+  "teachers": {
+    "T1": {
+      "id": "T1",
+      "label": "12L500",
+      "lead_type": "12-lead",
+      "hz": 500,
+      "in_channels": 12,
+      "input_key": "teacher_12l_500",
+      "checkpoint": "dafd_mvkt/outputs/teacher_best.pt",
+      "config": "dafd_mvkt/configs/teacher_500hz.yaml"
+    },
+    "T2": {
+      "id": "T2",
+      "label": "12L100",
+      "lead_type": "12-lead",
+      "hz": 100,
+      "in_channels": 12,
+      "input_key": "teacher_12l_100",
+      "checkpoint": "dafd_mvkt/outputs/teacher_12lead_100hz_resnet34_best.pt",
+      "config": "dafd_mvkt/configs/teacher_100hz_resnet34.yaml"
+    },
+    "T3": {
+      "id": "T3",
+      "label": "12L50",
+      "lead_type": "12-lead",
+      "hz": 50,
+      "in_channels": 12,
+      "input_key": "teacher_12l_50",
+      "checkpoint": "dafd_mvkt/outputs/teacher_12lead_50hz_resnet34_best.pt",
+      "config": "dafd_mvkt/configs/teacher_50hz_resnet34.yaml"
+    },
+    "T4": {
+      "id": "T4",
+      "label": "1L500",
+      "lead_type": "1-lead",
+      "hz": 500,
+      "in_channels": 1,
+      "input_key": "teacher_1l_500",
+      "checkpoint": "dafd_mvkt/outputs/ta_II_500hz_simclr_seed0_best.pt",
+      "config": "dafd_mvkt/configs/ta_ii_500hz.yaml"
+    },
+    "T5": {
+      "id": "T5",
+      "label": "1L100",
+      "lead_type": "1-lead",
+      "hz": 100,
+      "in_channels": 1,
+      "input_key": "teacher_1l_100",
+      "checkpoint": "dafd_mvkt/outputs/ta_II_100hz_from_ta500_seed0_best.pt",
+      "config": "dafd_mvkt/configs/ta_ii_500hz.yaml"
+    },
+    "T6": {
+      "id": "T6",
+      "label": "1L50",
+      "lead_type": "1-lead",
+      "hz": 50,
+      "in_channels": 1,
+      "input_key": "teacher_1l_50",
+      "checkpoint": "dafd_mvkt/outputs/student_II_50hz_bce_ta_mkd_ta_crf_feature_prog_simclr_seed0_best.pt",
+      "config": "dafd_mvkt/configs/student_50hz.yaml",
+      "note": "Best 1-lead 50Hz model (AUC=0.8396). Same input as student but stronger weights."
+    }
+  }
+}

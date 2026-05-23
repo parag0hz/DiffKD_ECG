@@ -1,0 +1,37 @@
+{
+  "output_name": "student_II_50hz_f02_F02F01_seed0",
+  "variant_id": "F02F01",
+  "w500": 0.6,
+  "w100": 0.4,
+  "temperature": 2.0,
+  "use_crf": true,
+  "beta_crf": 0.05,
+  "use_feature_kd": false,
+  "gamma_feature": 0.1,
+  "tw_mode": "fixed",
+  "macro_auc": 0.84432,
+  "macro_f1_0_5": 0.57183,
+  "macro_f1_tuned": 0.62911,
+  "val_auc_best": 0.84928,
+  "per_class_thresholds": {
+    "NORM": 0.2,
+    "MI": 0.29,
+    "STTC": 0.27,
+    "CD": 0.18,
+    "HYP": 0.2
+  },
+  "_meta": {
+    "seed": 0,
+    "lambda_kd": 1.0
+  },
+  "auc_NORM": 0.89966,
+  "f1_tuned_NORM": 0.80744,
+  "auc_MI": 0.82162,
+  "f1_tuned_MI": 0.59923,
+  "auc_STTC": 0.87528,
+  "f1_tuned_STTC": 0.67385,
+  "auc_CD": 0.86101,
+  "f1_tuned_CD": 0.67959,
+  "auc_HYP": 0.76406,
+  "f1_tuned_HYP": 0.38542
+}
